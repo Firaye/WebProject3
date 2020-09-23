@@ -1,0 +1,84 @@
+﻿@model WebProject3.Models.Marriagetbl
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Marriagetbl</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DateofMarriage)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DateofMarriage)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.HusbandFullname)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.HusbandFullname)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Wifefullname)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Wifefullname)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Wittness1)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Wittness1)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Wittness2)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Wittness2)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.WifeAge)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.WifeAge)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.HusbandAge)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.HusbandAge)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Region)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Region)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Zone)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Zone)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.IssueDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IssueDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.C)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.C.Fname)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Mnum">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

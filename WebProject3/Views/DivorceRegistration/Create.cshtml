@@ -1,0 +1,67 @@
+﻿@model WebProject3.Models.Divorcetbl
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<h4>Divorcetbl</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="DateofDivorce" class="control-label"></label>
+                <input asp-for="DateofDivorce" class="form-control" />
+                <span asp-validation-for="DateofDivorce" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DcirtificateNumber" class="control-label"></label>
+                <input asp-for="DcirtificateNumber" class="form-control" />
+                <span asp-validation-for="DcirtificateNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="HusbandFullName" class="control-label"></label>
+                <input asp-for="HusbandFullName" class="form-control" />
+                <span asp-validation-for="HusbandFullName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="WifeFullName" class="control-label"></label>
+                <input asp-for="WifeFullName" class="form-control" />
+                <span asp-validation-for="WifeFullName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="WifeAge" class="control-label"></label>
+                <input asp-for="WifeAge" class="form-control" />
+                <span asp-validation-for="WifeAge" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RequesterofDinvorce" class="control-label"></label>
+                <input asp-for="RequesterofDinvorce" class="form-control" />
+                <span asp-validation-for="RequesterofDinvorce" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IssueDate" class="control-label"></label>
+                <input asp-for="IssueDate" class="form-control" />
+                <span asp-validation-for="IssueDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Cid" class="control-label"></label>
+                <select asp-for="Cid" class ="form-control" asp-items="ViewBag.Cid"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

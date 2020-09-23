@@ -1,0 +1,84 @@
+﻿@model WebProject3.Models.Deathtbl
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<h4>Deathtbl</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="DrefNum" />
+            <div class="form-group">
+                <label asp-for="DateofDeath" class="control-label"></label>
+                <input asp-for="DateofDeath" class="form-control" />
+                <span asp-validation-for="DateofDeath" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CaseofDeath" class="control-label"></label>
+                <input asp-for="CaseofDeath" class="form-control" />
+                <span asp-validation-for="CaseofDeath" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Region" class="control-label"></label>
+                <input asp-for="Region" class="form-control" />
+                <span asp-validation-for="Region" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Zone" class="control-label"></label>
+                <input asp-for="Zone" class="form-control" />
+                <span asp-validation-for="Zone" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Woreda" class="control-label"></label>
+                <input asp-for="Woreda" class="form-control" />
+                <span asp-validation-for="Woreda" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Wittness" class="control-label"></label>
+                <input asp-for="Wittness" class="form-control" />
+                <span asp-validation-for="Wittness" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Reltionofwittness" class="control-label"></label>
+                <input asp-for="Reltionofwittness" class="form-control" />
+                <span asp-validation-for="Reltionofwittness" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Age" class="control-label"></label>
+                <input asp-for="Age" class="form-control" />
+                <span asp-validation-for="Age" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Sex" class="control-label"></label>
+                <input asp-for="Sex" class="form-control" />
+                <span asp-validation-for="Sex" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IssueDate" class="control-label"></label>
+                <input asp-for="IssueDate" class="form-control" />
+                <span asp-validation-for="IssueDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Cid" class="control-label"></label>
+                <select asp-for="Cid" class="form-control" asp-items="ViewBag.Cid"></select>
+                <span asp-validation-for="Cid" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

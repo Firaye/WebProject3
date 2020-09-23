@@ -1,0 +1,69 @@
+﻿@model WebProject3.Models.Divorcetbl
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Divorcetbl</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DateofDivorce)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DateofDivorce)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DcirtificateNumber)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DcirtificateNumber)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.HusbandFullName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.HusbandFullName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.WifeFullName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.WifeFullName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.WifeAge)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.WifeAge)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.RequesterofDinvorce)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.RequesterofDinvorce)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.IssueDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IssueDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.C)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.C.Fname)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Did" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

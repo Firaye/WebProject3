@@ -1,0 +1,95 @@
+﻿@model IEnumerable<WebProject3.Models.Deathtbl>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.DateofDeath)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CaseofDeath)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Region)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Zone)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Woreda)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Wittness)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Reltionofwittness)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Age)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sex)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IssueDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.C)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateofDeath)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CaseofDeath)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Region)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Zone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Woreda)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Wittness)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Reltionofwittness)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Age)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sex)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IssueDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.C.Fname)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.DrefNum">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.DrefNum">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.DrefNum">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

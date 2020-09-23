@@ -1,0 +1,72 @@
+﻿@model WebProject3.Models.Adoptiontbl
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Adoptiontbl</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ChildFullName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ChildFullName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AdoptFullName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AdoptFullName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CitizenshipofAdopter)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CitizenshipofAdopter)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Ageofchild)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Ageofchild)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AdopterphoneNumber)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AdopterphoneNumber)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ReasonforAdoption)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ReasonforAdoption)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Sexofchild)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Sexofchild)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.IssueDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.IssueDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.C)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.C.Fname)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.AdoptId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

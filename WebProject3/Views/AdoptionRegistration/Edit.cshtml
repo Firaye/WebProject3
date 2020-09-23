@@ -1,0 +1,74 @@
+﻿@model WebProject3.Models.Adoptiontbl
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<h4>Adoptiontbl</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="AdoptId" />
+            <div class="form-group">
+                <label asp-for="ChildFullName" class="control-label"></label>
+                <input asp-for="ChildFullName" class="form-control" />
+                <span asp-validation-for="ChildFullName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AdoptFullName" class="control-label"></label>
+                <input asp-for="AdoptFullName" class="form-control" />
+                <span asp-validation-for="AdoptFullName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CitizenshipofAdopter" class="control-label"></label>
+                <input asp-for="CitizenshipofAdopter" class="form-control" />
+                <span asp-validation-for="CitizenshipofAdopter" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ageofchild" class="control-label"></label>
+                <input asp-for="Ageofchild" class="form-control" />
+                <span asp-validation-for="Ageofchild" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AdopterphoneNumber" class="control-label"></label>
+                <input asp-for="AdopterphoneNumber" class="form-control" />
+                <span asp-validation-for="AdopterphoneNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ReasonforAdoption" class="control-label"></label>
+                <input asp-for="ReasonforAdoption" class="form-control" />
+                <span asp-validation-for="ReasonforAdoption" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Sexofchild" class="control-label"></label>
+                <input asp-for="Sexofchild" class="form-control" />
+                <span asp-validation-for="Sexofchild" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="IssueDate" class="control-label"></label>
+                <input asp-for="IssueDate" class="form-control" />
+                <span asp-validation-for="IssueDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Cid" class="control-label"></label>
+                <select asp-for="Cid" class="form-control" asp-items="ViewBag.Cid"></select>
+                <span asp-validation-for="Cid" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
